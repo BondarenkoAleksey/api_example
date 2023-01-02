@@ -61,7 +61,6 @@ class Assertions:
                 print("Случая нет в проверяльщике assertion, ДОБАВИТЬ!!!")
 
     """Проверка соответствия фактического значения параметра ожидаемому"""
-
     def assert_value_in_json(
             self: Response, expected_param, expected_value, fact_value):
         assert fact_value == expected_value, \
@@ -72,7 +71,6 @@ class Assertions:
               f" равное {fact_value}, совпадает с ожидаемым")
 
     """Проверка, что фактическое значение параметра не равно ожидаемому"""
-
     def assert_value_in_json_not_equal_to_actual(
             self: Response, expected_param, expected_value, fact_value):
         assert fact_value != expected_value, \

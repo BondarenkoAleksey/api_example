@@ -1,3 +1,4 @@
+import time
 from assertion import *
 from http_methods import HttpMethod
 from utils.const.const_authorization import *
@@ -84,7 +85,4 @@ class Authorization(HttpMethod):
             assert_value_in_json_not_equal_to_actual(
                 response, 'expire', round(time.time()),
                 response.json()['data']['expire'])
-
-        print("expire = ", response.json()['data']['expire'])
-        print("timestamp now = ", round(time.time()))
         print("response_json = ", response.json())
